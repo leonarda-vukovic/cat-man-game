@@ -54,6 +54,16 @@ $(document).ready(function() {
       console.error("Error loading CSV:", error);
   });
 
+  const $alphabet = $("#alphabet");
+  for (let i = 65; i <= 90; i++) {
+    const letter = String.fromCharCode(i);
+    $alphabet.append(`
+        <button type="button" id="${letter}">
+            ${letter}
+        </button>
+    `);
+  }
+
   $("#alphabet button").unbind("click").click(function(){
     var letter = $(this).attr("id")
     letter = letter.toUpperCase()
@@ -98,7 +108,7 @@ function parseCSV(text) {
   }
 }
 
-function playGame(level){ //this function now accepts a level
+function playGame(level){ 
   currentLevel = level;
   currentRound = 1;
   maxGuesses = maxGuessesPerLevel[level];
@@ -125,7 +135,7 @@ function startRound(){
   document.getElementById("roundDisplay").innerHTML = "Round: " + currentRound;
   document.getElementById("levelDisplay").innerHTML = "Level: " + currentLevel;
   document.getElementById("categoryDisplay").innerHTML = "Category: " + currentCategory;
-  document.getElementById("hintDisplay").innerHTML = ""; //so that a hint doesnt remain on screen in case it was activated in the previous round
+  document.getElementById("hintDisplay").innerHTML = ""; 
   updateThreeButtons();  //this controls the state of Hint, Skip and Guess Word buttons
 }
 
@@ -137,7 +147,7 @@ function showScreen(screenId) {
 }
 
 function updateThreeButtons(){
-  if(roundOver){  //if the round is over, all three need o be disabled
+  if(roundOver){  //if the round is over, all three need to be disabled
       $("#hintBtn").attr("disabled", "disabled");
       $("#skipBtn").attr("disabled", "disabled");
       $("#guessBtn").attr("disabled", "disabled");
