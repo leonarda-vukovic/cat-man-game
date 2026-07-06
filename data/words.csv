@@ -1,0 +1,120 @@
+mouse,Easy,Animals,Small rodent
+wolf,Easy,Animals,Wild dog-like animal
+snake,Easy,Animals,Legless reptile
+tiger,Easy,Animals,Large striped cat
+zebra,Easy,Animals,Horse with stripes
+shark,Easy,Animals,Large sea predator
+bear,Easy,Animals,Big furry mammal
+cat,Easy,Animals,Small pet feline
+dog,Easy,Animals,Common pet animal
+rabbit,Easy,Animals,Long-eared hopper
+eagle,Medium,Animals,Large bird of prey
+lizard,Medium,Animals,Small scaly reptile
+koala,Medium,Animals,Australian tree animal
+camel,Medium,Animals,Desert animal with humps
+monkey,Medium,Animals,Tree-climbing primate
+octopus,Medium,Animals,Eight-armed sea animal
+penguin,Medium,Animals,Flightless Antarctic bird
+ostrich,Medium,Animals,Very large bird
+swan,Medium,Animals,Elegant white bird
+giraffe,Medium,Animals,Tall long-necked animal
+raindeer,Hard,Animals,Deer from cold regions
+squirrel,Hard,Animals,Nut-collecting rodent
+racoon,Hard,Animals,Masked night animal
+hedgehog,Hard,Animals,Spiky small mammal
+rhinoceros,Hard,Animals,Large horned animal
+kangaroo,Hard,Animals,Jumping marsupial
+chameleon,Hard,Animals,Color-changing lizard
+flamingo,Hard,Animals,Pink long-legged bird
+sea turtle,Hard,Animals,Ocean-shelled reptile
+polar bear,Hard,Animals,White Arctic bear
+hippopotamus,Extra Hard,Animals,Large river mammal
+armadillo,Extra Hard,Animals,Armor-plated mammal
+meerkat,Extra Hard,Animals,Standing desert mammal
+walrus,Extra Hard,Animals,Tusked sea mammal
+centipede,Extra Hard,Animals,Many-legged crawler
+capybara,Extra Hard,Animals,Largest rodent
+grasshopper,Extra Hard,Animals,Jumping insect
+porcupine,Extra Hard,Animals,Spiky rodent
+poison dart frog,Extra Hard,Animals,Bright toxic frog
+box jellyfish,Extra Hard,Animals,Extremely venomous jellyfish
+China,Easy,Countries,South Asian country
+India,Easy,Countries,Most populous country
+Spain,Easy,Countries,Country on Iberian Peninsula
+France,Easy,Countries,Country of baguettes
+Brazil,Easy,Countries,Largest South American country
+Germany,Easy,Countries,Central European country
+Japan,Easy,Countries,Island nation in Asia
+Russia,Easy,Countries,Largest country by area
+Ireland,Easy,Countries,Green island nation
+Italy,Easy,Countries,Boot-shaped country
+Romania,Medium,Countries,Eastern European country
+Thailand,Medium,Countries,Popular Southeast Asian country
+Morocco,Medium,Countries,North African country
+Portugal,Medium,Countries,Atlantic European country
+Greece,Medium,Countries,Ancient Mediterranean country
+Nigeria,Medium,Countries,Most populous African country
+Colombia,Medium,Countries,Country in northern South America
+Belgium,Medium,Countries,Brussels is the capital
+Finland,Medium,Countries,Northern European country
+Poland,Medium,Countries,Central European nation
+Indonesia,Hard,Countries,Large island country
+Venezuela,Hard,Countries,Country with oil reserves
+Zimbabwe,Hard,Countries,Southern African country
+Botswana,Hard,Countries,Landlocked African nation
+South Korea,Hard,Countries,East Asian tech hub
+Bangladesh,Hard,Countries,Country in South Asia
+Azerbaijan,Hard,Countries,Caspian Sea country
+Uzbekistan,Hard,Countries,Central Asian country
+Armenia,Hard,Countries,Mountainous Caucasus nation
+Argentina,Hard,Countries,Large South American country
+Kyrgyzstan,Extra Hard,Countries,Central Asian mountain country
+Czech Republic,Extra Hard,Countries,Central European state
+Kazakhstan,Extra Hard,Countries,Large Central Asian country
+Papua New Guinea,Extra Hard,Countries,Island nation near Australia
+Bosnia and Herzegovina,Extra Hard,Countries,Balkan country
+Lesotho,Extra Hard,Countries,Small country in Africa
+Djibouti,Extra Hard,Countries,Small country in Africa
+Andorra,Extra Hard,Countries,Small country in Europe
+Suriname,Extra Hard,Countries,Small South American country
+Seychelles,Extra Hard,Countries,Indian Ocean islands
+Apple,Easy,Food,A common red or green fruit
+Bread,Easy,Food,Baked food made from flour
+Carrot,Easy,Food,Orange vegetable
+Banana,Easy,Food,Yellow fruit
+Noodles,Easy,Food,Long pasta strands
+Egg,Easy,Food,Comes from chickens
+Milk,Easy,Food,White drink from cows
+Chicken,Easy,Food,Common meat
+Butter,Easy,Food,Spread made from milk
+Fish,Easy,Food,Lives in water
+Omlette,Medium,Food,Eggs cooked and folded with fillings
+Sausage,Medium,Food,Meat stuffed in a casing
+Sandwich,Medium,Food,Bread with filling inside
+Lasagna,Medium,Food,Layered pasta dish
+Cereal,Medium,Food,Breakfast grains
+Honey,Medium,Food,Sweet bee product
+Muffin,Medium,Food,Small baked cake
+Waffle,Medium,Food,Grid-pattern breakfast food
+Yoghurt,Medium,Food,Fermented dairy product
+Pepper,Medium,Food,Spicy seasoning
+Zucchini,Hard,Food,Green summer squash
+Cabbage,Hard,Food,Leafy green vegetable
+Mushroom,Hard,Food,Edible fungus
+Croissant,Hard,Food,Buttery French pastry
+Spaghetti,Hard,Food,Long thin pasta
+Blueberry,Hard,Food,Small blue fruit
+Broccoli,Hard,Food,Green tree-like vegetable
+Eggplant,Hard,Food,Purple vegetable
+Hazelnut,Hard,Food,Edible brown nut
+Pineapple,Hard,Food,Spiky tropical fruit
+Asparagus,Extra Hard,Food,Green spear vegetable
+Mayonnaise,Extra Hard,Food,Creamy sauce
+Artichoke,Extra Hard,Food,Edible flower bud
+Pomegranate,Extra Hard,Food,Red seed fruit
+Butterscotch,Extra Hard,Food,Sweet candy flavor
+Marshmallow,Extra Hard,Food,Soft sugary treat
+Mozzarella,Extra Hard,Food,Soft white cheese
+Cornflakes,Extra Hard,Food,Crunchy cereal
+Gingerbread,Extra Hard,Food,Spiced baked treat
+Halloumi,Extra Hard,Food,Firm grilling cheese

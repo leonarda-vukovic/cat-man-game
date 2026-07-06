@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cat-Man</title>
+  <link rel="stylesheet" href="../css/Cat-Man.css">
+  <script src = "../js/jquery-4.0.0.js"></script>
+  <script src = "../js/Cat-Man.js"></script>
+  
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <!--Initial screen-->
+  <div id="introScreen">
+
+    <div class="centerContent">
+      <img src="../media/CatImage.jpg" class="logo" alt="Cat Image"> <!-- Source: https://www.vecteezy.com/vector-art/11844916-cute-devil-cat-celebrates-halloween-->
+      <h1>Cat-Man</h1>
+      <p class="subtitle">A Hangman game... with a dose of cats &#128049;</p>
+      <button id="playBtn">Play Now</button>
+      <p class="credits">developed by Leonarda Vukovic</p>
+    </div>
+
+  </div>
+  
+
+  <!--Story/level select page -->
+  <div id="storyScreen" style="display:none;">
+
+    <div class="centerContent">
+      <h1>Welcome to Cat-Man</h1>
+      <p class="storyText">
+        You made a mistake...<br>A small one. Easy to forget.<br><br>You forgot to feed your cat.<br><br>Now the cat is <strong>furious</strong>.<br><br>What used to be a cute, harmless pet has turned into a relentless little predator and it's coming for <strong>you</strong>.
+      </p>
+      <h2>Your Mission</h2>
+      <p class="storyText">
+        Survive.<br><br>Each round, you must guess a hidden word or phrase.<br>Every wrong guess brings the cat closer...<br><br>Closer...<br>and closer...<br><br>Until there's nowhere left to run.
+      </p>
+      <h2>Choose Your Fate</h2>
+      <p class="storyText">
+        Each difficulty level changes the rules:<br>Choose carefully - your survival depends on it.<br><br>Check the rules for more information.
+      </p>
+      <button id="rulesBtn">Rules</button>
+      <h3>Ready?</h3>
+      
+      <div class="difficultyButtons">
+        <button class="levelBtn" onclick="playGame('Easy')" id="easyBtn" disabled>Easy</button>
+        <button class="levelBtn" onclick="playGame('Medium')" id="mediumBtn" disabled>Medium</button>
+        <button class="levelBtn" onclick="playGame('Hard')" id="hardBtn" disabled>Hard</button>
+        <button class="levelBtn" onclick="playGame('Extra Hard')" id="extraBtn" disabled>Extra Hard</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!--Rules page-->
+  <div id="rulesScreen" style="display:none;">
+
+    <div class="centerContent">
+      <h1>Game Rules</h1>
+      <h2>Objective</h2>
+      <p class="storyText">
+        Your goal is to survive all levels and rounds without losing all your lives.<br><br>If you lose all your lives, the cat catches you.
+      </p>
+      <h2>How the Game Works</h2>
+      <p class="storyText">
+        The game is divided into <strong>4 difficulty levels</strong>: Easy, Medium, Hard, and Extra Hard.<br><br>Each level contains <strong>10 rounds</strong>.<br>In every round, you must guess a hidden word or phrase within a limited number of guesses.
+      </p>
+      <h2>Difficulty Levels</h2>
+      <p class="storyText">
+        As you progress, the game will progressively increase in difficulty according to several factors:
+      </p>
+      <ul class="storyText">
+        <li>The length of the word or phrase</li>
+        <li>The complexity of vocabulary or terminology</li>
+        <li>The number of incorrect guesses allowed</li>
+      </ul>
+      <p class="storyText">
+        Level specifications:
+      </p>
+      <ul class="storyText">
+        <li><strong>Easy:</strong> 10 lives, 6 guesses per round</li>
+        <li><strong>Medium:</strong> 8 lives, 6 guesses per round</li>
+        <li><strong>Hard:</strong> 6 lives, 5 guesses per round</li>
+        <li><strong>Extra Hard:</strong> 3 lives, 5 guesses per round</li>
+      </ul>
+      <h2>Lives</h2>
+      <p class="storyText">
+        You start with a set number of lives depending on the chosen level.<br><br>Each time you lose a round, you lose <strong>one life</strong> and the cat gets closer.<br><br>When you finish a level, you automatically move to the next one.<br><strong>Your remaining lives carry over</strong> - they do not reset.
+      </p>
+      <h2>Losing and Progression</h2>
+      <p class="storyText">
+        If you fail a round, you still move on to the next one.<br>Rounds cannot be replayed during the same game session.<br><br>If you lose all your lives, the game ends, meaning the cat got you.
+      </p>
+      <h2>Guessing</h2>
+      <p class="storyText">
+        You can:
+      </p>
+      <ul class="storyText">
+        <li>Guess letters one by one</li>
+        <li>Or guess the entire word/phrase at once</li>
+      </ul>
+      <p class="storyText">
+        A wrong full-word guess counts the same as a wrong letter - it uses up a guess and can cost you a life.
+      </p>
+      <h2>Special Buttons</h2>
+      <p class="storyText">
+        You have limited help available:
+      </p>
+      <ul class="storyText">
+        <li><strong>Hints (3 total):</strong> Gives a clue about the word or phrase and it does not cost a life.</li>
+        <li><strong>Skip (1 total):</strong> Skips the current round without losing a life.</li>
+      </ul>
+      <h2>Categories</h2>
+      <p class="storyText">
+        Each word belongs to one of three categories:
+      </p>
+      <ul class="storyText">
+        <li>Food</li>
+        <li>Countries</li>
+        <li>Animals</li>
+      </ul>
+      <p class="storyText">
+        The category will be displayed at the start of every round.
+      </p>
+      <h2>Final Goal</h2>
+      <p class="storyText">
+        Reach the final round of the <strong>Extra Hard</strong> level and survive.<br><br>That's the only way to escape the cat.
+      </p>
+      <button id="backToStory">Back</button>
+    </div>
+
+  </div>
+
+  <!-- Game area -->
+  <div id="gameArea" style="display:none;">
+
+    <div id="leftPanel">
+      <h2>Cat-Man</h2>
+      <div id="gameStats">
+        <p id="levelDisplay"></p>
+        <p id="livesDisplay"></p>
+        <p id="roundDisplay"></p>
+      </div>
+      <p id="categoryDisplay"></p>
+      <p id="hintDisplay"></p>
+      <p id="result"></p> 
+      <p id="wrongGuesses"></p>
+      <p id="finalResult"></p>
+      <div id="guessWordArea">
+        <input type="text" id="inWord">
+        <button id="guessBtn">Guess Word</button>
+      </div>
+      <button id="hintBtn">Hint</button>
+      <button id="skipBtn">Skip</button>
+      <button id="nextRoundBtn" style="display:none;">Next Round</button>
+      <button id="playAgainBtn" style="display:none;">Play Again</button>
+
+      
+      <!--Alphabet -->
+      <div id="alphabet">
+        <button type = "button" id = "A">A</button>
+        <button type = "button" id = "B">B</button>
+        <button type = "button" id = "C">C</button>
+        <button type = "button" id = "D">D</button>
+        <button type = "button" id = "E">E</button>
+        <button type = "button" id = "F">F</button>
+        <button type = "button" id = "G">G</button>
+        <button type = "button" id = "H">H</button>
+        <button type = "button" id = "I">I</button>
+        <button type = "button" id = "J">J</button>
+        <button type = "button" id = "K">K</button>
+        <button type = "button" id = "L">L</button>
+        <button type = "button" id = "M">M</button>
+        <button type = "button" id = "N">N</button>
+        <button type = "button" id = "O">O</button>
+        <button type = "button" id = "P">P</button>
+        <button type = "button" id = "Q">Q</button>
+        <button type = "button" id = "R">R</button>
+        <button type = "button" id = "S">S</button>
+        <button type = "button" id = "T">T</button>
+        <button type = "button" id = "U">U</button>
+        <button type = "button" id = "V">V</button>
+        <button type = "button" id = "W">W</button>
+        <button type = "button" id = "X">X</button>
+        <button type = "button" id = "Y">Y</button>
+        <button type = "button" id = "Z">Z</button>
+      </div>
+    </div>
+
+    <div id="rightPanel">
+      <!--Cat Image-->
+      <div id="catContainer">
+        <img id="catImg" src="../Media/CatImage.jpg" alt="Cat Image"></div>
+      </div>
+
+  </div>
+</body>
+</html>

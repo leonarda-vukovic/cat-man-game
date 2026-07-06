@@ -1,0 +1,256 @@
+.background {
+  background-image: url('../media/CatImage.jpg');
+  position: fixed; 
+  background-size: cover;
+  background-position: center;
+  top: 0; /*starts at top left corner*/
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  z-index: 0; 
+  filter: blur(20px);
+}
+
+#introScreen,#storyScreen,#rulesScreen,#gameArea {
+  position: relative;
+  z-index: 1;
+}
+
+/*Initial page*/
+.centerContent .logo{ 
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px; 
+  border-radius: 12px; 
+}
+
+body, html{ 
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#introScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.centerContent{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+}
+.centerContent h1 {
+  font-size: 3em;
+  margin: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,1);
+}
+#playBtn{
+  padding: 15px 40px; 
+  border-radius: 8px; 
+  border: none;
+  background: #ffcc00;
+  color: #333;
+  font-size: 1.2em;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+#playBtn:hover {
+  background: #ffaa00;
+}
+.centerContent .subtitle {
+  font-size: 1.2em;
+  margin-bottom: 30px; 
+  text-shadow: 1px 1px 5px rgba(0,0,0,1);
+  font-style: italic;
+}
+.credits {
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.8);
+}
+
+  
+/*Story page + Rules page*/
+.storyText {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 1px 1px 5px rgba(0,0,0,1);
+}
+.centerContent h2{
+  text-shadow: 2px 2px 8px rgba(0,0,0,1);
+}
+.difficultyButtons {
+  margin-top: 20px;
+}
+.levelBtn {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ffcc00;
+  transition: 0.3s;
+  font-size: 1em;
+}
+.levelBtn:hover {
+  background: #ffaa00;
+}
+.levelBtn:disabled{
+  background: #e0e0e0;
+  color: #888;
+  cursor: not-allowed;
+}
+.background::after {  
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+#backToStory{
+  margin-bottom: 20px;
+}
+
+
+/*Cat image*/
+#catContainer {
+  width: 80%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+#catImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+
+/*Game area*/
+#gameArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+#gameStats{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+#leftPanel {
+  padding-left: 10px;
+  width: 60%;
+  text-align: center;
+}
+#rightPanel {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  padding-right: 10px;
+}
+#gameArea h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+#levelDisplay, #livesDisplay, #roundDisplay, #categoryDisplay {
+  margin: 5px;
+  font-size: 1.1em;
+}
+#result {
+  font-size: 2.5em;
+  letter-spacing: 10px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+#finalResult {
+  font-size: 1.3em;
+  margin-top: 15px;
+  font-weight: bold;
+}
+#guessWordArea {
+  margin: 20px;
+}
+#inWord {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: none;
+}
+
+#guessBtn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #ffcc00;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#guessBtn:hover {
+  background: #ffaa00;
+}
+
+#alphabet {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#alphabet button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #ffcc00;
+  color: black;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#alphabet button:hover {
+  background: #ffaa00;
+}
+#alphabet button:disabled {
+  background: #222;
+  color: #777;
+  cursor: not-allowed;
+}
+
+#hintBtn, #skipBtn, #nextRoundBtn, #playAgainBtn {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ffcc00;
+}
+#skipBtn:hover, #hintBtn:hover, #nextRoundBtn:hover, #playAgainBtn:hover{
+  background-color:#ffaa00
+}
+#guessBtn:disabled, #hintBtn:disabled, #skipBtn:disabled{
+  background: #e0e0e0;
+  color: #888;
+  cursor: not-allowed;
+}
